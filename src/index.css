@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", system-ui, sans-serif;
+}
+
+body {
+  font-family: var(--font-sans);
+}
+
+/* Scroll behavior for the video-inspired section transitions. */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+
+/* Achievements route: prevent horizontal overflow while keeping the
+   certificate hero and archive in a compact sequential flow. */
+.achievements-page {
+  width: 100%;
+  overflow-x: clip;
+}
