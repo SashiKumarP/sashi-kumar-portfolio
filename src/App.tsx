@@ -1714,6 +1714,53 @@ const pageVariants = {
   pageExit: { opacity: 0, y: -40 } 
 };
 
+/* =========================================
+   Global Pointer Glow
+   ========================================= */
+function CursorGlow({ isDark }: { isDark: boolean }) {
+  const glowRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    const glow = glowRef.current;
+    if (!glow) return;
+
+    let raf = 0;
+    let targetX = window.innerWidth / 2;
+    let targetY = window.innerHeight / 2;
+    let currentX = targetX;
+    let currentY = targetY;
+
+    const onPointerMove = (event: PointerEvent) => {
+      if (event.pointerType && event.pointerType !== "mouse") return;
+      targetX = event.clientX;
+      targetY = event.clientY;
+    };
+
+    const render = () => {
+      currentX += (targetX - currentX) * 0.16;
+      currentY += (targetY - currentY) * 0.16;
+      glow.style.transform = `translate3d(${currentX}px, ${currentY}px, 0) translate3d(-50%, -50%, 0)`;
+      raf = window.requestAnimationFrame(render);
+    };
+
+    window.addEventListener("pointermove", onPointerMove, { passive: true });
+    raf = window.requestAnimationFrame(render);
+
+    return () => {
+      window.removeEventListener("pointermove", onPointerMove);
+      window.cancelAnimationFrame(raf);
+    };
+  }, []);
+
+  return (
+    <div
+      ref={glowRef}
+      aria-hidden="true"
+      className={`pointer-glow ${isDark ? "pointer-glow-dark" : "pointer-glow-light"}`}
+    />
+  );
+}
+
 export default function App() {
   const [activePage, setActivePage] = useState<Page>("home");
   const [showIntro, setShowIntro] = useState(true);
@@ -1784,6 +1831,9 @@ export default function App() {
         isDark ? "bg-black text-white" : "bg-gray-50 text-gray-900"
       }`}
     >
+      {/* Global pointer glow: follows the mouse across the entire site */}
+      <CursorGlow isDark={isDark} />
+
       {/* 3.0 Scroll Progress Bar */}
       <motion.div
         className={`fixed top-0 left-0 right-0 h-[3px] z-[1000] origin-left ${

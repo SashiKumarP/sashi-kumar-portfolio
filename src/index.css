@@ -31,3 +31,53 @@ body {
   width: 100%;
   overflow-x: clip;
 }
+
+
+/* Subtle site-wide mouse-follow glow. It is global, non-interactive,
+   and intentionally restrained so it does not obscure content. */
+.pointer-glow {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 340px;
+  height: 340px;
+  border-radius: 9999px;
+  pointer-events: none;
+  z-index: 70;
+  transform: translate3d(-50%, -50%, 0);
+  will-change: transform;
+  filter: blur(22px);
+  transition: opacity 180ms ease;
+  mix-blend-mode: screen;
+}
+
+.pointer-glow-dark {
+  background: radial-gradient(
+    circle,
+    rgba(88, 170, 255, 0.12) 0%,
+    rgba(121, 84, 255, 0.08) 26%,
+    rgba(0, 0, 0, 0) 68%
+  );
+}
+
+.pointer-glow-light {
+  background: radial-gradient(
+    circle,
+    rgba(75, 130, 255, 0.10) 0%,
+    rgba(125, 92, 255, 0.06) 26%,
+    rgba(255, 255, 255, 0) 68%
+  );
+  mix-blend-mode: multiply;
+}
+
+@media (pointer: coarse) {
+  .pointer-glow {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pointer-glow {
+    display: none;
+  }
+}
