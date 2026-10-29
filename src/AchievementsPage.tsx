@@ -31,14 +31,14 @@ export type AchievementEntry = {
 };
 
 const entries: AchievementEntry[] = [
-  { id: "ai-ml-aws", title: "AI/ML Virtual Internship", issuer: "Amazon Web Services", category: "internship", file: "AI-ML Virtual internship AWS.pdf", thumb: "AI-ML_Virtual_internship_AWS.jpg" },
-  { id: "ai-ml-google", title: "AI/ML Virtual Internship", issuer: "Google", category: "internship", file: "AI-ML Virtual internship GOOGLE.pdf", thumb: "AI-ML_Virtual_internship_GOOGLE.jpg" },
-  { id: "data-engineering-aws", title: "Data Engineering Virtual Internship", issuer: "Amazon Web Services", category: "internship", file: "Data Engineering Virtual internship AWS.pdf", thumb: "Data_Engineering_Virtual_internship_AWS.jpg" },
+  { id: "ai-ml-aws", title: "AI/ML Virtual Internship (AWS Academy)", issuer: "AICTE – EduSkills", category: "internship", file: "AI-ML Virtual internship AWS.pdf", thumb: "AI-ML_Virtual_internship_AWS.jpg", date: "May – Jul 2023" },
+  { id: "ai-ml-google", title: "AI/ML Virtual Internship (Google for Developers)", issuer: "AICTE – EduSkills", category: "internship", file: "AI-ML Virtual internship GOOGLE.pdf", thumb: "AI-ML_Virtual_internship_GOOGLE.jpg", date: "Jul – Sep 2024" },
+  { id: "data-engineering-aws", title: "Data Engineering Virtual Internship (AWS Academy)", issuer: "AICTE – EduSkills", category: "internship", file: "Data Engineering Virtual internship AWS.pdf", thumb: "Data_Engineering_Virtual_internship_AWS.jpg", date: "Jan – Mar 2025" },
   { id: "full-stack-hmi", title: "Full Stack Web Development Using Python", issuer: "HMI Engineering Services", category: "internship", file: "FULL STACK WEB DEVELOPMENT HMI.pdf", thumb: "FULL_STACK_WEB_DEVELOPMENT_HMI.jpg", date: "May 14 – Jul 20, 2024" },
   { id: "mandemit-data-science", title: "Data Science Internship", issuer: "MandemIT", category: "internship", file: "MandemIT Data Science.pdf", thumb: "MandemIT_Data_Science.jpg", date: "Aug 28, 2024 – Dec 07, 2025" },
-  { id: "rpa-blueprism", title: "RPA Virtual Internship", issuer: "Blue Prism", category: "internship", file: "RPA virtual Internship Blueprism.pdf", thumb: "RPA_virtual_Internship_Blueprism.jpg" },
+  { id: "rpa-blueprism", title: "RPA Virtual Internship (Blue Prism)", issuer: "AICTE – EduSkills", category: "internship", file: "RPA virtual Internship Blueprism.pdf", thumb: "RPA_virtual_Internship_Blueprism.jpg" },
   { id: "web-certimate", title: "Web Development Internship", issuer: "Certimate Infotech", category: "internship", file: "Web Development Internship Certimate.pdf", thumb: "Web_Development_Internship_Certimate.jpg", date: "Mar 05 – Jun 04, 2023", credential: "CIPL-B4/48744" },
-  { id: "internship-certificate", title: "Internship Certificate", issuer: "Raghu Institute of Technology", category: "internship", file: "sashi  KUMAR PENTAPALLI_internship_certificate.pdf", thumb: "sashi__KUMAR_PENTAPALLI_internship_certificate.jpg" },
+  { id: "internship-certificate", title: "Long-Term Internship, 240 hours (Google AI-ML & AWS Data Engineering)", issuer: "EduSkills · AP State Council of Higher Education", date: "Mar 2025", category: "internship", file: "sashi  KUMAR PENTAPALLI_internship_certificate.pdf", thumb: "sashi__KUMAR_PENTAPALLI_internship_certificate.jpg" },
 ];
 
 const heroCards = entries.slice(0, 6);

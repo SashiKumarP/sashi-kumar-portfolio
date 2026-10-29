@@ -8,6 +8,7 @@ import {
   FileBadge,
   Globe,
   GraduationCap,
+  Mail,
   MessageCircle,
   Phone,
   Server,
@@ -46,15 +47,17 @@ import {
 
 type Language = "EN" | "IT" | "DE" | "HI";
 
+const CONTACT_EMAIL = "sashikumar24680@gmail.com";
+
 const dict = {
   EN: {
     home: "Home",
     about: "About",
     contact: "Contact",
-    role: "AI/ML & Software Engineer",
-    heroRole: "AI/ML Engineer & Full-Stack Developer",
+    role: "Data Science & Python Developer",
+    heroRole: "Data Science Student & Python Developer",
     available: "Available for Work",
-    heroSubtext: "HI, I'M SASHI KUMAR PENTAPALLI. I BUILD SCALABLE SYSTEMS POWERED BY INTELLIGENCE.",
+    heroSubtext: "HI, I'M SASHI KUMAR PENTAPALLI. M.SC. DATA SCIENCE STUDENT IN PARMA, WORKING WITH PYTHON, DATA AND MACHINE LEARNING.",
     
     // Core Focus Translations
     coreFocus: "CORE FOCUS",
@@ -62,29 +65,29 @@ const dict = {
     quote1: '" Applied AI.',
     quote2: ' Scalable Data.',
     quote3: ' robust software engineering ."',
-    col1P1: "I build intelligent systems and the ",
-    col1Highlight: "data infrastructure",
-    col1P2: " that makes them reliable at scale.",
+    col1P1: "I turn messy data into ",
+    col1Highlight: "clear analysis",
+    col1P2: " and working machine-learning prototypes.",
     col2Title: "SCOPE & PLATFORM",
-    col2Text: "Focusing on predictive models, optimized data processing, and robust pipelines designed for production environments and measurable performance.",
-    col2Sub: "Bridging labs and live systems.",
+    col2Text: "Data cleaning, exploratory analysis and predictive models in Python, presented through charts, dashboards and simple apps.",
+    col2Sub: "From notebook to working app.",
     col3Title: "INTEGRATION",
-    col3Text: "Beyond models, I architect full-stack ecosystems: secure backends, robust data architectures, and scalable web pipelines.",
+    col3Text: "Alongside the models, I build the web side: Python web apps with Django and Flask, React front ends and WordPress sites.",
     
     // Professional Stats Translations
     statsTag: "PROFESSIONAL STATISTICS",
     statsHeading: "Data that speaks. AI that reasons. Software that ships.",
     statsSub: "Three disciplines, one engineer and the numbers behind the work.",
-    stat1L: "INTERNSHIPS", stat1V: "4+",
-    stat2L: "PROJECTS COMPLETED", stat2V: "12+",
-    stat3L: "PROFESSIONAL EXP", stat3V: "1+ Years",
+    stat1L: "INTERNSHIPS", stat1V: "3",
+    stat2L: "VIRTUAL INTERNSHIPS", stat2V: "4",
+    stat3L: "GITHUB PROJECTS", stat3V: "4",
     stat4L: "TECH & TOOLS", stat4V: "20+",
 
     // End CTA & Footer Translations
     cta1: "Let's Build Something",
     cta2: "Together",
     ctaWords: ["Amazing", "Innovative", "Intelligent", "Creative"],
-    ctaSub: "Open to strategic collaborations in AI driven systems and scalable full Stack Engineering. Let's transform ambitious ideas into production ready solutions.",
+    ctaSub: "Open to English-speaking part-time work in data analysis, Python development and machine learning, remote or in Parma.",
     hireMe: "Hire Me",
     viewMyResume: "View My Resume",
     footerCopy: `© 2026 SASHI KUMAR PENTAPALLI. ALL RIGHTS RESERVED.`,
@@ -106,44 +109,44 @@ const dict = {
     viewCerts: "View Certificates",
     socials: "Connect & Socials",
     scan: "Scan to Chat",
-    internships: "4+ Internships",
+    internships: "3 Internships",
     currentlyLearning: "Currently Learning",
   },
   IT: {
     home: "Home",
     about: "About",
     contact: "Contatti",
-    role: "Ingegnere AI/ML e Software",
-    heroRole: "Ingegnere AI/ML & Sviluppatore Full-Stack",
+    role: "Data Science e Sviluppatore Python",
+    heroRole: "Studente di Data Science & Sviluppatore Python",
     available: "Disponibile per Lavoro",
-    heroSubtext: "CIAO, SONO SASHI KUMAR PENTAPALLI. COSTRUISCO SISTEMI SCALABILI ALIMENTATI DALL'INTELLIGENZA.",
+    heroSubtext: "CIAO, SONO SASHI KUMAR PENTAPALLI. STUDENTE DI LAUREA MAGISTRALE IN DATA SCIENCE A PARMA: LAVORO CON PYTHON, DATI E MACHINE LEARNING.",
     
     coreFocus: "FOCUS PRINCIPALE",
     coreFocusRole: "INGEGNERE AI, DATI E SOFTWARE",
     quote1: '" AI Applicata.',
     quote2: ' Dati Scalabili.',
     quote3: ' ingegneria del software robusta ."',
-    col1P1: "Costruisco sistemi intelligenti e l'",
-    col1Highlight: "infrastruttura dati",
-    col1P2: " che li rende affidabili su larga scala.",
+    col1P1: "Trasformo dati disordinati in ",
+    col1Highlight: "analisi chiare",
+    col1P2: " e prototipi di machine learning funzionanti.",
     col2Title: "AMBITO E PIATTAFORMA",
-    col2Text: "Concentrandosi su modelli predittivi, elaborazione dati ottimizzata e pipeline robuste progettate per ambienti di produzione.",
-    col2Sub: "Unendo laboratori e sistemi live.",
+    col2Text: "Pulizia dei dati, analisi esplorativa e modelli predittivi in Python, presentati con grafici, dashboard e semplici app.",
+    col2Sub: "Dal notebook all'app funzionante.",
     col3Title: "INTEGRAZIONE",
-    col3Text: "Oltre ai modelli, architetto ecosistemi full-stack: backend sicuri, architetture dati robuste e pipeline web scalabili.",
+    col3Text: "Oltre ai modelli, sviluppo la parte web: app Python con Django e Flask, front-end React e siti WordPress.",
 
     statsTag: "STATISTICHE PROFESSIONALI",
     statsHeading: "Dati che parlano. AI che ragiona. Software distribuito.",
     statsSub: "Tre discipline, un ingegnere e i numeri dietro il lavoro.",
-    stat1L: "STAGE", stat1V: "4+",
-    stat2L: "PROGETTI COMPLETATI", stat2V: "12+",
-    stat3L: "ESPERIENZA PROF.", stat3V: "1+ Anni",
+    stat1L: "STAGE", stat1V: "3",
+    stat2L: "STAGE VIRTUALI", stat2V: "4",
+    stat3L: "PROGETTI SU GITHUB", stat3V: "4",
     stat4L: "TECNOLOGIE E STRUMENTI", stat4V: "20+",
 
     cta1: "Costruiamo Qualcosa di",
     cta2: "Insieme",
     ctaWords: ["Straordinario", "Innovativo", "Intelligente", "Creativo"],
-    ctaSub: "Aperto a collaborazioni strategiche in sistemi guidati dall'IA e Ingegneria Full Stack scalabile. Trasformiamo idee ambiziose in soluzioni pronte per la produzione.",
+    ctaSub: "Disponibile per lavoro part-time in inglese nell'analisi dati, nello sviluppo Python e nel machine learning, da remoto o a Parma.",
     hireMe: "Assumimi",
     viewMyResume: "Vedi Il Mio Curriculum",
     footerCopy: `© 2026 SASHI KUMAR PENTAPALLI. TUTTI I DIRITTI RISERVATI.`,
@@ -165,44 +168,44 @@ const dict = {
     viewCerts: "Visualizza Certificati",
     socials: "Connettiti e Social",
     scan: "Scansiona per Chattare",
-    internships: "4+ Stage",
+    internships: "3 Stage",
     currentlyLearning: "Sto imparando",
   },
   DE: {
     home: "Startseite",
     about: "Über mich",
     contact: "Kontakt",
-    role: "KI/ML- & Software-Ingenieur",
-    heroRole: "KI/ML-Ingenieur & Full-Stack-Entwickler",
+    role: "Data Science & Python-Entwickler",
+    heroRole: "Data-Science-Student & Python-Entwickler",
     available: "Verfügbar für Arbeit",
-    heroSubtext: "HALLO, ICH BIN SASHI KUMAR PENTAPALLI. ICH BAUE SKALIERBARE SYSTEME, DIE DURCH INTELLIGENZ ANGETRIEBEN WERDEN.",
+    heroSubtext: "HALLO, ICH BIN SASHI KUMAR PENTAPALLI. M.SC.-STUDENT IN DATA SCIENCE IN PARMA – ICH ARBEITE MIT PYTHON, DATEN UND MACHINE LEARNING.",
     
     coreFocus: "KERNSCHWERPUNKT",
     coreFocusRole: "KI-, DATEN- & SOFTWARE-INGENIEUR",
     quote1: '" Angewandte KI.',
     quote2: ' Skalierbare Daten.',
     quote3: ' robuste Softwareentwicklung ."',
-    col1P1: "Ich baue intelligente Systeme und die ",
-    col1Highlight: "Dateninfrastruktur",
-    col1P2: ", die sie in großem Maßstab zuverlässig macht.",
+    col1P1: "Ich mache aus unordentlichen Daten ",
+    col1Highlight: "klare Analysen",
+    col1P2: " und funktionierende Machine-Learning-Prototypen.",
     col2Title: "UMFANG & PLATTFORM",
-    col2Text: "Fokus auf prädiktive Modelle, optimierte Datenverarbeitung und robuste Pipelines für Produktionsumgebungen.",
-    col2Sub: "Verbindung von Laboren und Live-Systemen.",
+    col2Text: "Datenbereinigung, explorative Analyse und prädiktive Modelle in Python, präsentiert mit Diagrammen, Dashboards und einfachen Apps.",
+    col2Sub: "Vom Notebook zur funktionierenden App.",
     col3Title: "INTEGRATION",
-    col3Text: "Jenseits von Modellen architekte ich Full-Stack-Ökosysteme: sichere Backends und skalierbare Web-Pipelines.",
+    col3Text: "Neben den Modellen baue ich die Web-Seite: Python-Web-Apps mit Django und Flask, React-Frontends und WordPress-Seiten.",
 
     statsTag: "PROFESSIONELLE STATISTIKEN",
     statsHeading: "Daten, die sprechen. KI, die argumentiert.",
     statsSub: "Drei Disziplinen, ein Ingenieur und die Zahlen hinter der Arbeit.",
-    stat1L: "PRAKTIKA", stat1V: "4+",
-    stat2L: "ABGESCHLOSSENE PROJEKTE", stat2V: "12+",
-    stat3L: "BERUFSERFAHRUNG", stat3V: "1+ Jahre",
+    stat1L: "PRAKTIKA", stat1V: "3",
+    stat2L: "VIRTUELLE PRAKTIKA", stat2V: "4",
+    stat3L: "GITHUB-PROJEKTE", stat3V: "4",
     stat4L: "TECHNIK & WERKZEUGE", stat4V: "20+",
 
     cta1: "Lass uns zusammen etwas",
     cta2: "bauen",
     ctaWords: ["Erstaunliches", "Innovatives", "Intelligentes", "Kreatives"],
-    ctaSub: "Offen für strategische Zusammenarbeiten in KI-gesteuerten Systemen und skalierbarem Full-Stack-Engineering. Lassen Sie uns ehrgeizige Ideen in produktionsreife Lösungen umwandeln.",
+    ctaSub: "Offen für englischsprachige Teilzeitarbeit in Datenanalyse, Python-Entwicklung und Machine Learning – remote oder in Parma.",
     hireMe: "Stell mich ein",
     viewMyResume: "Meinen Lebenslauf ansehen",
     footerCopy: `© 2026 SASHI KUMAR PENTAPALLI. ALLE RECHTE VORBEHALTEN.`,
@@ -224,44 +227,44 @@ const dict = {
     viewCerts: "Zertifikate ansehen",
     socials: "Verbinden & Soziales",
     scan: "Zum Chatten scannen",
-    internships: "4+ Praktika",
+    internships: "3 Praktika",
     currentlyLearning: "Lerne gerade",
   },
   HI: {
     home: "होम",
     about: "मेरे बारे में",
     contact: "संपर्क",
-    role: "AI/ML और सॉफ्टवेयर इंजीनियर",
-    heroRole: "AI/ML इंजीनियर और फुल-स्टैक डेवलपर",
+    role: "डेटा साइंस और पायथन डेवलपर",
+    heroRole: "डेटा साइंस छात्र और पायथन डेवलपर",
     available: "काम के लिए उपलब्ध",
-    heroSubtext: "नमस्ते, मैं शशि कुमार पेंटापल्ली हूँ। मैं बुद्धिमत्ता द्वारा संचालित स्केलेबल सिस्टम बनाता हूँ।",
+    heroSubtext: "नमस्ते, मैं शशि कुमार पेंटापल्ली हूँ। पार्मा में डेटा साइंस का M.Sc. छात्र, पायथन, डेटा और मशीन लर्निंग के साथ काम करता हूँ।",
     
     coreFocus: "मुख्य फोकस",
     coreFocusRole: "एआई, डेटा और सॉफ्टवेयर इंजीनियर",
     quote1: '" एप्लाइड एआई.',
     quote2: ' स्केलेबल डेटा.',
     quote3: ' मजबूत सॉफ्टवेयर इंजीनियरिंग ."',
-    col1P1: "मैं बुद्धिमान सिस्टम और ",
-    col1Highlight: "डेटा इन्फ्रास्ट्रक्चर",
-    col1P2: " बनाता हूं जो उन्हें बड़े पैमाने पर विश्वसनीय बनाता है।",
+    col1P1: "मैं बिखरे हुए डेटा को ",
+    col1Highlight: "स्पष्ट विश्लेषण",
+    col1P2: " और काम करने वाले मशीन लर्निंग प्रोटोटाइप में बदलता हूँ।",
     col2Title: "दायरा और मंच",
-    col2Text: "उत्पादन के वातावरण और मापने योग्य प्रदर्शन के लिए डिज़ाइन किए गए भविष्य कहनेवाला मॉडल, और मजबूत पाइपलाइनों पर ध्यान केंद्रित करना।",
-    col2Sub: "प्रयोगशालाओं और लाइव सिस्टम को जोड़ना।",
+    col2Text: "पायथन में डेटा सफाई, खोजपूर्ण विश्लेषण और प्रेडिक्टिव मॉडल, जिन्हें चार्ट, डैशबोर्ड और सरल ऐप के ज़रिए प्रस्तुत किया जाता है।",
+    col2Sub: "नोटबुक से काम करने वाले ऐप तक।",
     col3Title: "एकीकरण",
-    col3Text: "मॉडल से परे, मैं पूर्ण-स्टैक पारिस्थितिक तंत्र तैयार करता हूँ: सुरक्षित बैकएंड, और स्केलेबल वेब पाइपलाइन।",
+    col3Text: "मॉडल के साथ-साथ मैं वेब भाग भी बनाता हूँ: Django और Flask के साथ पायथन वेब ऐप, React फ्रंट-एंड और WordPress साइटें।",
 
     statsTag: "व्यावसायिक आंकड़े",
     statsHeading: "डेटा जो बोलता है। AI जो तर्क करता है। सॉफ्टवेयर जो काम करता है।",
     statsSub: "तीन विषय, एक इंजीनियर और काम के पीछे के आंकड़े।",
-    stat1L: "इंटर्नशिप", stat1V: "4+",
-    stat2L: "पूरी की गई परियोजनाएं", stat2V: "12+",
-    stat3L: "पेशेवर अनुभव", stat3V: "1+ वर्ष",
+    stat1L: "इंटर्नशिप", stat1V: "3",
+    stat2L: "वर्चुअल इंटर्नशिप", stat2V: "4",
+    stat3L: "GitHub प्रोजेक्ट्स", stat3V: "4",
     stat4L: "तकनीक और उपकरण", stat4V: "20+",
 
     cta1: "आइए मिलकर कुछ",
     cta2: "बनाएं",
     ctaWords: ["अद्भुत", "अभिनव", "बुद्धिमान", "रचनात्मक"],
-    ctaSub: "AI संचालित सिस्टम और स्केलेबल फुल स्टैक इंजीनियरिंग में रणनीतिक सहयोग के लिए खुला हूँ। आइए महत्वाकांक्षी विचारों को उत्पादन के लिए तैयार समाधानों में बदलें।",
+    ctaSub: "डेटा विश्लेषण, पायथन डेवलपमेंट और मशीन लर्निंग में अंग्रेज़ी-भाषी पार्ट-टाइम काम के लिए उपलब्ध, रिमोट या पार्मा में।",
     hireMe: "मुझे काम पर रखें",
     viewMyResume: "मेरा बायोडाटा देखें",
     footerCopy: `© 2026 शशि कुमार पेंटापल्ली। सर्वाधिकार सुरक्षित।`,
@@ -283,7 +286,7 @@ const dict = {
     viewCerts: "प्रमाणपत्र देखें",
     socials: "जुड़ें और सोशल",
     scan: "चैट के लिए स्कैन करें",
-    internships: "4+ इंटर्नशिप",
+    internships: "3 इंटर्नशिप",
     currentlyLearning: "वर्तमान में सीख रहे हैं",
   },
 };
@@ -350,7 +353,7 @@ const LiveClock = () => {
     const updateTime = () => {
       setTime(
         new Date().toLocaleTimeString("en-US", {
-          timeZone: "Asia/Kolkata",
+          timeZone: "Europe/Rome",
           hour12: false,
         })
       );
@@ -584,7 +587,7 @@ const GoalTechStackStage = ({isDark}:{isDark:boolean}) => {
   return <section className={`relative min-h-[82vh] w-full overflow-hidden border-b ${isDark?"border-white/10 bg-black":"border-black/10 bg-white"}`}><motion.div aria-hidden animate={{x:[0,-30,0],rotate:[-1.2,1.2,-1.2]}} transition={{duration:16,repeat:Infinity,ease:"easeInOut"}} className="absolute inset-[-10%] opacity-35 pointer-events-none"><div className="absolute inset-0" style={{backgroundImage:"linear-gradient(rgba(255,255,255,.09) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.09) 1px,transparent 1px)",backgroundSize:"90px 90px"}}/></motion.div><div className="relative z-10 mx-auto flex min-h-[82vh] max-w-[1500px] flex-col justify-center px-6 py-20 md:px-12 lg:px-20"><motion.div initial={{opacity:0,y:35}} whileInView={{opacity:1,y:0}} viewport={{once:false,amount:.25}} transition={{duration:.75}} className="mb-12 flex items-center justify-between gap-6"><span className="text-[10px] font-black uppercase tracking-[0.42em] text-white/45 md:text-xs">TECH STACK & ECOSYSTEM</span><span className="text-[10px] font-black uppercase tracking-[0.36em] text-white/20 md:text-xs">ENGINEERING TOOLKIT</span></motion.div><div className="border-t border-white/10 pt-10"><div className="grid grid-cols-2 gap-x-7 gap-y-8 sm:grid-cols-3 md:grid-cols-4 md:gap-x-12 md:gap-y-11">{tools.map((tool,i)=><motion.div key={tool} initial={{opacity:0,y:18}} whileInView={{opacity:1,y:0}} viewport={{once:false,amount:.15}} transition={{delay:i*.035,duration:.45}} className="flex items-center gap-3"><span className="h-3 w-3 shrink-0 rounded-full bg-blue-400"/><span className="text-sm font-semibold text-white/80 md:text-base">{tool}</span></motion.div>)}</div></div><div className="mt-16 text-center text-[10px] font-black uppercase tracking-[0.45em] text-white/20">KEEP SCROLLING</div></div></section>;
 };
 
-const EngineeringSections = ({isDark}:{isDark:boolean}) => <div className="w-full"><GoalTechStackStage isDark={isDark}/><EngineeringChapterSection index={0} isDark={isDark} side="left" icon={BrainCircuit} eyebrow="INTELLIGENCE SYSTEMS" title="Intelligence Systems" description="Specializing in architecting autonomous systems and intelligence-driven platforms—from model training and NLP workflows to data analytics and computer vision." chips={["LLM Workflows","RAG Systems","Deep Learning","Computer Vision","MLOps","Data Analytics"]}/><EngineeringChapterSection index={1} isDark={isDark} side="right" icon={Server} eyebrow="SCALABLE SYSTEMS" title="Scalable Systems" description="Building reliable digital systems with modular architecture, robust backends, production-minded full-stack engineering, and cloud-ready workflows using Python, Django, Flask, React and DevOps tooling." chips={["System Architecture","Full-Stack Dev","API Design","Cloud","DevOps","Software Design"]}/><EngineeringChapterSection index={2} isDark={isDark} side="left" icon={Award} eyebrow="STRATEGIC INNOVATION" title="Strategic Innovation" description="Translating complex requirements into practical solutions through problem solving, research, collaboration and clear engineering communication." chips={["Problem Solving","Research","Teamwork","Communication","Leadership","Systemic Thinking"]}/><section className={`relative min-h-[55vh] w-full overflow-hidden border-b ${isDark?"border-white/10":"border-black/10"}`}><motion.div initial={{opacity:0,y:70}} whileInView={{opacity:1,y:0}} viewport={{once:false,amount:.3}} transition={{duration:.9,ease:[.16,1,.3,1]}} className="mx-auto flex min-h-[55vh] max-w-[1100px] flex-col items-center justify-center px-6 text-center"><span className="mb-8 text-[10px] font-black uppercase tracking-[0.45em] text-white/25">DISCOVER MY LATEST WORK</span><h2 className={`text-4xl font-medium leading-[1.02] tracking-[-0.04em] md:text-6xl lg:text-7xl ${isDark?"text-white":"text-black"}`}>Discover my latest work and <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-violet-300 to-fuchsia-400">creative solutions</span> that bring ideas to life.</h2><span className="mt-10 text-[9px] font-black uppercase tracking-[0.4em] text-white/25">SCROLL TO EXPLORE</span></motion.div></section></div>;
+const EngineeringSections = ({isDark}:{isDark:boolean}) => <div className="w-full"><GoalTechStackStage isDark={isDark}/><EngineeringChapterSection index={0} isDark={isDark} side="left" icon={BrainCircuit} eyebrow="INTELLIGENCE SYSTEMS" title="Intelligence Systems" description="Training and comparing machine-learning models, from classic classifiers to neural networks for computer vision, with careful data preparation and evaluation." chips={["Machine Learning","Deep Learning","Computer Vision","Data Preprocessing","Exploratory Analysis","Data Visualisation"]}/><EngineeringChapterSection index={1} isDark={isDark} side="right" icon={Server} eyebrow="SCALABLE SYSTEMS" title="Scalable Systems" description="Building database-backed web applications with Python, Django and Flask, React front ends and WordPress sites, with the code kept in Git." chips={["Python Web Apps","Django / Flask","React","SQL / MySQL","WordPress","Git"]}/><EngineeringChapterSection index={2} isDark={isDark} side="left" icon={Award} eyebrow="STRATEGIC INNOVATION" title="Strategic Innovation" description="Translating complex requirements into practical solutions through problem solving, research, collaboration and clear engineering communication." chips={["Problem Solving","Research","Teamwork","Communication","Leadership","Systemic Thinking"]}/><section className={`relative min-h-[55vh] w-full overflow-hidden border-b ${isDark?"border-white/10":"border-black/10"}`}><motion.div initial={{opacity:0,y:70}} whileInView={{opacity:1,y:0}} viewport={{once:false,amount:.3}} transition={{duration:.9,ease:[.16,1,.3,1]}} className="mx-auto flex min-h-[55vh] max-w-[1100px] flex-col items-center justify-center px-6 text-center"><span className="mb-8 text-[10px] font-black uppercase tracking-[0.45em] text-white/25">DISCOVER MY LATEST WORK</span><h2 className={`text-4xl font-medium leading-[1.02] tracking-[-0.04em] md:text-6xl lg:text-7xl ${isDark?"text-white":"text-black"}`}>Discover my latest work and <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-violet-300 to-fuchsia-400">creative solutions</span> that bring ideas to life.</h2><span className="mt-10 text-[9px] font-black uppercase tracking-[0.4em] text-white/25">SCROLL TO EXPLORE</span></motion.div></section></div>;
 
 const AboutGateway = ({
   isDark,
@@ -1043,10 +1046,10 @@ const Home = ({ t, isDark, navigateTo, onOpenAbout }: { t: any; isDark: boolean;
           </h3>
           <div className="space-y-5">
             {[
-              { company: "Google", role: "AI/ML Intern", initial: "G" },
-              { company: "MandemIT", role: "Data Science Intern", initial: "M" },
-              { company: "HMI Engineering", role: "Full Stack Web Dev Intern", initial: "H" },
-              { company: "Certimate Infotech", role: "Web Dev Intern", initial: "C" },
+              { company: "MandemIT", role: "Data Science Intern · Aug 2024 – Dec 2025", initial: "M" },
+              { company: "HMI Engineering Services", role: "Full Stack Python Intern · May – Jul 2024", initial: "H" },
+              { company: "Certimate Infotech", role: "Web Development Intern · Mar – Jun 2023", initial: "C" },
+              { company: "AICTE – EduSkills", role: "4 virtual internships (Google for Developers, AWS Academy, Blue Prism) · 2023 – 2025", initial: "E" },
             ].map((job, i) => (
               <div key={i} className="flex gap-4 items-center group/job">
                 <div className={`w-10 h-10 rounded-full flex items-center justify-center shrink-0 border font-bold transition-colors ${bgSoft} ${borderClass} ${hoverBgSoft} ${isDark ? "text-white/80" : "text-gray-800"}`}>
@@ -1083,14 +1086,20 @@ const Home = ({ t, isDark, navigateTo, onOpenAbout }: { t: any; isDark: boolean;
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
             <div>
               <p className={`text-[10px] font-bold uppercase tracking-widest flex items-center gap-1 mb-2 ${textAccent}`}><GraduationCap className="w-4 h-4" /> {t.education}</p>
-              <p className={`text-base font-bold ${textClass}`}>B.Tech CSE (AI & ML)</p>
-              <p className={`text-xs ${textMuted}`}>JNTU Gurajada Vizianagaram</p>
+              <p className={`text-base font-bold ${textClass}`}>M.Sc. Data Science for Management</p>
+              <p className={`text-xs ${textMuted}`}>University of Parma · 2026 – 2028 (in progress)</p>
+            </div>
+            <div className={`hidden md:block w-px h-12 rounded-full mx-4 ${isDark ? "bg-white/10" : "bg-black/10"}`}></div>
+            <div>
+              <p className={`text-[10px] font-bold uppercase tracking-widest mb-2 ${textAccent}`}>B.Tech</p>
+              <p className={`text-base font-bold ${textClass}`}>CSE (AI & ML)</p>
+              <p className={`text-xs ${textMuted}`}>Raghu Institute of Technology · 2025</p>
             </div>
             <div className={`hidden md:block w-px h-12 rounded-full mx-4 ${isDark ? "bg-white/10" : "bg-black/10"}`}></div>
             <div>
               <p className={`text-[10px] font-bold uppercase tracking-widest mb-2 ${textAccent}`}>Diploma</p>
               <p className={`text-base font-bold ${textClass}`}>Electrical & Electronics (EEE)</p>
-              <p className={`text-xs ${textMuted}`}>SBTET</p>
+              <p className={`text-xs ${textMuted}`}>Sankethika Polytechnic · 2021</p>
             </div>
           </div>
         </BentoCard>
@@ -1205,34 +1214,34 @@ const Projects = ({ isDark }: { t: any; isDark: boolean; key?: string }) => {
       id: "healthcare",
       num: "01",
       title: "Healthcare Cyber Defense",
-      desc: "A Machine Learning-powered cybersecurity framework designed to safeguard sensitive healthcare data by predicting threats and detecting network anomalies in real-time.",
-      detailedDesc: "This project provides a comprehensive ML-powered approach to healthcare cybersecurity. It leverages advanced anomaly detection algorithms to identify potential breaches before they happen, significantly reducing incident response times. Built with a scalable architecture to handle high-throughput network logs.",
+      desc: "Machine-learning models that classify healthcare network traffic as normal or attack, served through a Streamlit app.",
+      detailedDesc: "Trained and compared logistic regression, SVM, random forest and gradient boosting classifiers, plus a Keras neural network, on network-traffic data from healthcare software-defined networks. A Streamlit app loads the trained models to classify new traffic records. Nov 2024 – Mar 2025.",
       link: "https://github.com/SashiKumarP/Healthcare-Cyber-Defense",
       category: "AI/ML",
-      stack: ["Python", "Scikit-Learn", "Pandas", "TensorFlow"],
-      stats: [{ label: "Accuracy", value: "98.5%" }, { label: "Latency", value: "<10ms" }]
+      stack: ["Python", "scikit-learn", "pandas", "TensorFlow / Keras", "Streamlit"],
+      stats: [{ label: "Models compared", value: "5" }, { label: "Interface", value: "Streamlit" }]
     },
     {
       id: "emotion",
       num: "02",
       title: "Facial Emotion Detection",
-      desc: "Facial Emotion Detector using machine learning.",
-      detailedDesc: "A deep learning model capable of classifying human emotions from facial expressions in real-time video streams. Trained on diverse datasets to ensure high accuracy across various demographics. The lightweight model is optimized for edge devices.",
+      desc: "A convolutional neural network that recognises facial emotions in photos, with a desktop app.",
+      detailedDesc: "Trained a convolutional neural network with TensorFlow/Keras on 48×48 grayscale face images to classify emotions. A Tkinter desktop app finds the face with OpenCV and labels the emotion in an uploaded image. NullClass project, Aug – Sep 2024.",
       link: "https://github.com/SashiKumarP/Facial-Emotion-Detection",
       category: "AI/ML",
-      stack: ["Python", "OpenCV", "Keras", "NumPy"],
-      stats: [{ label: "Parameters", value: "2.4M" }, { label: "FPS", value: "60+" }]
+      stack: ["Python", "TensorFlow / Keras", "OpenCV", "Tkinter", "NumPy"],
+      stats: [{ label: "Input", value: "48×48 px" }, { label: "Interface", value: "Desktop app" }]
     },
     {
-      id: "scalable",
+      id: "wams",
       num: "03",
-      title: "Scalable Data Pipeline",
-      desc: "A robust full-stack application built to process and visualize large-scale datasets in real-time.",
-      detailedDesc: "An end-to-end data processing pipeline that ingests, cleans, and aggregates large volumes of streaming data. Features a responsive real-time dashboard for monitoring key metrics. Designed for high availability and fault tolerance in production environments.",
-      link: "#",
+      title: "WAMS 2024 Event Website",
+      desc: "Designed and maintained the home and gallery pages of the WAMS 2024 event website.",
+      detailedDesc: "Worked with the event team on the design and upkeep of the home and gallery pages of the WAMS 2024 event website, Dec 2023 – Feb 2024. The event site is no longer online.",
+      link: "",
       category: "Full-Stack",
-      stack: ["React", "Node.js", "PostgreSQL", "Redis", "Docker"],
-      stats: [{ label: "Throughput", value: "10k/sec" }, { label: "Uptime", value: "99.9%" }]
+      stack: ["Web design", "Team project"],
+      stats: [{ label: "Pages", value: "Home & gallery" }, { label: "Period", value: "Dec 2023 – Feb 2024" }]
     }
   ];
 
@@ -1441,7 +1450,7 @@ const Projects = ({ isDark }: { t: any; isDark: boolean; key?: string }) => {
                 </motion.div>
               </motion.div>
 
-              <motion.div variants={modalItemVariants} className="mt-4 pt-6 border-t flex justify-end gap-4" style={{ borderColor: isDark ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.1)'}}>
+              {selectedProject.link && <motion.div variants={modalItemVariants} className="mt-4 pt-6 border-t flex justify-end gap-4" style={{ borderColor: isDark ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.1)'}}>
                 <a
                   href={selectedProject.link}
                   target="_blank"
@@ -1451,7 +1460,7 @@ const Projects = ({ isDark }: { t: any; isDark: boolean; key?: string }) => {
                 >
                   <Code size={16} /> Repository <ArrowUpRight className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                 </a>
-              </motion.div>
+              </motion.div>}
             </motion.div>
           </div>
         )}
@@ -1604,12 +1613,12 @@ const Contact = ({ t, isDark }: { t: any; isDark: boolean; key?: string }) => {
       setTimeout(() => setFormStatus("idle"), 3000);
       return;
     }
-    setFormStatus("loading");
-    setTimeout(() => {
-      setFormStatus("success");
-      setFormData({ name: "", email: "", subject: "", message: "" });
-      setTimeout(() => setFormStatus("idle"), 4000);
-    }, 1500);
+    // No mail backend: hand the message to the visitor's own email app.
+    const subject = formData.subject.trim() || `Message from ${formData.name.trim()}`;
+    const body = `${formData.message.trim()}\n\n${formData.name.trim()}\n${formData.email.trim()}`;
+    window.location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    setFormStatus("success");
+    setTimeout(() => setFormStatus("idle"), 4000);
   };
 
   const textClass = isDark ? "text-white" : "text-gray-900";
@@ -1663,7 +1672,7 @@ const Contact = ({ t, isDark }: { t: any; isDark: boolean; key?: string }) => {
           <input type="text" placeholder={t.subject} value={formData.subject} onChange={(e) => setFormData({ ...formData, subject: e.target.value })} className={inputClass} />
           <textarea placeholder={t.project} rows={4} required value={formData.message} onChange={(e) => setFormData({ ...formData, message: e.target.value })} className={`${inputClass} ${formStatus === "error" && !formData.message.trim() ? "!border-red-500 placeholder:text-red-500/50" : ""}`}></textarea>
           <button type="submit" disabled={formStatus === "loading" || formStatus === "success"} className={`mt-4 flex items-center gap-4 px-8 py-4 rounded-full font-bold uppercase tracking-widest text-xs transition-all active:scale-95 self-start group ${isDark ? "bg-white text-black hover:bg-white/90" : "bg-black text-white hover:bg-gray-900"} ${formStatus === "success" ? "!bg-green-500 !text-white" : formStatus === "error" ? "!bg-red-500 !text-white" : ""} disabled:opacity-70 disabled:active:scale-100`}>
-            {formStatus === "loading" ? "SENDING..." : formStatus === "success" ? "SENT SUCCESSFULLY" : formStatus === "error" ? "CHECK FIELDS" : t.send}
+            {formStatus === "loading" ? "OPENING EMAIL..." : formStatus === "success" ? "EMAIL APP OPENED" : formStatus === "error" ? "CHECK FIELDS" : t.send}
             {formStatus === "idle" && <ArrowUpRight className="w-4 h-4 group-hover:rotate-45 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" />}
           </button>
         </form>
@@ -1685,9 +1694,13 @@ const Contact = ({ t, isDark }: { t: any; isDark: boolean; key?: string }) => {
               <Camera size={20} className={isDark ? "text-white" : "text-black"} />
               <span className={`text-[10px] font-bold uppercase tracking-wider ${isDark ? "text-white" : "text-black"}`}>Instagram</span>
             </a>
-            <a href="tel:+917893844609" className={`px-6 py-4 rounded-full border transition-colors flex items-center justify-center gap-3 ${bgSoft} ${borderClass} ${hoverBgSoft}`}>
+            <a href={`mailto:${CONTACT_EMAIL}`} className={`px-6 py-4 rounded-full border transition-colors flex items-center justify-center gap-3 ${bgSoft} ${borderClass} ${hoverBgSoft}`}>
+              <Mail size={20} className={isDark ? "text-white" : "text-black"} />
+              <span className={`text-[10px] font-bold tracking-wider ${isDark ? "text-white" : "text-black"}`}>{CONTACT_EMAIL}</span>
+            </a>
+            <a href="tel:+393522891914" className={`px-6 py-4 rounded-full border transition-colors flex items-center justify-center gap-3 ${bgSoft} ${borderClass} ${hoverBgSoft}`}>
               <Phone size={20} className={isDark ? "text-white" : "text-black"} />
-              <span className={`text-[10px] font-bold uppercase tracking-wider ${isDark ? "text-white" : "text-black"}`}>+917893844609</span>
+              <span className={`text-[10px] font-bold uppercase tracking-wider ${isDark ? "text-white" : "text-black"}`}>+39 352 289 1914</span>
             </a>
             <a href="https://wa.me/917893844609" target="_blank" rel="noopener noreferrer" className={`px-6 py-4 rounded-full border transition-colors flex items-center justify-center gap-3 ${bgSoft} ${borderClass} ${hoverBgSoft}`}>
               <MessageCircle size={20} className="text-green-500" />
